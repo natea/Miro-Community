@@ -462,7 +462,8 @@ class Feed(Source):
     when_submitted = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=FEED_STATUSES)
     etag = models.CharField(max_length=250, blank=True)
-
+    avoid_frontpage = models.BooleanField(default=False)
+    
     class Meta:
         unique_together = (
             ('feed_url', 'site'))

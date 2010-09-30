@@ -164,7 +164,8 @@ class SourceForm(forms.ModelForm):
     auto_approve = BooleanRadioField(required=False)
     thumbnail = forms.ImageField(required=False)
     delete_thumbnail = forms.BooleanField(required=False)
-
+    avoid_frontpage = forms.BooleanField(required=False)
+    
     class Meta:
         model = models.Source
         fields = ('auto_approve', 'auto_categories', 'auto_authors',
