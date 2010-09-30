@@ -611,7 +611,17 @@ class ViewTestCase(BaseTestCase):
                           list(models.Video.objects.new(
                     status=models.VIDEO_STATUS_ACTIVE)))
         self.assertEquals(list(response.context['comments']), [])
-
+        
+        #test Feeds with avoid_frontpage == True
+        videos_count = len(response.context['new_videos'])
+        feeds = [v.feed for v in response.context['new_videos'] if v.feed]
+        feeds[0].avoid_frontpage = True
+        feeds[0].save()
+        
+        response = c.get(reverse('localtv_index'))
+        self.assertStatusCodeEquals(response, 200)
+        self.assertNotEquals(videos_count, len(response.context['new_videos']))
+        
     def test_index_recent_comments_skips_rejected_videos(self):
         """
         Recent comments should only include approved videos.
