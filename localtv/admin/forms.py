@@ -666,7 +666,16 @@ class AuthorForm(user_profile_forms.ProfileForm):
             for field_name in ['name', 'logo', 'location',
                                'description', 'website']:
                 del self.fields[field_name]
-
+    
+    def clean_role(self):
+        if self.sitelocation.is_free:
+            value = self.cleaned_data['role'] 
+            admins_count = self.sitelocation.admins.count()
+            if admins_count and value == 'admin':
+                raise forms.ValidationError('You have FREE account and can\'t create more admins.')
+            
+        return value
+    
     def clean(self):
         if self.instance.is_superuser and 'DELETE' in self.cleaned_data:
             # can't delete a superuser, so remove that from the cleaned data
