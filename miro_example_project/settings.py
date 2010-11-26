@@ -69,7 +69,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     )
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'miro_example_project.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
