@@ -1,4 +1,4 @@
--e git+http://git.participatoryculture.org/localtv@master#egg=miro-community
+#-e git+http://git.participatoryculture.org/localtv@master#egg=miro-community
 -e git+http://git.participatoryculture.org/djpagetabs@master#egg=djpagetabs
 -e git+http://git.participatoryculture.org/djvideo@master#egg=djvideo
 -e git+http://git.participatoryculture.org/vidscraper@master#egg=vidscraper
