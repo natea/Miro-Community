@@ -185,7 +185,7 @@ CELERY_BACKEND = 'cache' # this MUST be set, otherwise the import page won't be
                          # able to figure out if the task has ended
 
 # haystack search
-HAYSTACK_SITECONF = 'example_project.search_sites'
+HAYSTACK_SITECONF = 'miro_example_project.search_sites'
 HAYSTACK_SEARCH_ENGINE = 'whoosh'
 HAYSTACK_WHOOSH_PATH = 'whoosh_index'
 
