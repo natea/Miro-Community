@@ -37,8 +37,8 @@ django-notification==0.1.5
 
 -e hg+http://bitbucket.org/ubernostrum/django-registration/#egg=django-registration
 
-oauth2==1.5.167
 -e git+git://github.com/simplegeo/python-oauth2.git#egg=oauth2
+#oauth2==1.5.167
 
 -e git+http://github.com/paulswartz/Django-Socialauth.git@master#egg=Django-Socialauth
 #django-socialauth
