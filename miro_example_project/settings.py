@@ -154,9 +154,9 @@ FLOWPLAYER_JS_URL = MEDIA_URL + 'js/flowplayer-3.0.6.min.js'
 CACHE_BACKEND = 'locmem://'
 
 # vidscraper keys
-from vidscraper.metasearch.sites import vimeo
-vimeo.VIMEO_API_KEY = None
-vimeo.VIMEO_API_SECRET = None
+#from vidscraper.metasearch.sites import vimeo
+#vimeo.VIMEO_API_KEY = None
+#vimeo.VIMEO_API_SECRET = None
 
 from vidscraper.sites import ustream
 ustream.USTREAM_API_KEY = None
