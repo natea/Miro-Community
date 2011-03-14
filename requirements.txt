@@ -7,7 +7,8 @@
 -e git+http://git.participatoryculture.org/python-bitly@master#egg=python-bitly
 BeautifulSoup==3.2.0
 Django==1.2.5
-PIL==1.1.6
+# removing PIL because it's already installed as a OS package (python-imaging) on the server
+#PIL==1.1.6
 #South==0.6.2
 
 #-e svn+http://feedparser.googlecode.com/svn/trunk/#egg=feedparser
